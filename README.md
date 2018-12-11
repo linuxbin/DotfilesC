@@ -4,7 +4,7 @@
 cd ~
 git clone https://github.com/flipsidecreations/dotfiles.git
 
-cd dotfiles
+cd dotfilesc
 ```
 ### Run intstall
 ```
