@@ -106,6 +106,7 @@ syntax enable
 
 set nu
 set background=dark
+highlight Normal ctermfg=magenta
 "let g:solarized_termcolors=256
 " colorscheme brogrammer
 
