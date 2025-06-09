@@ -1,11 +1,11 @@
 # ~/.bashrc
 
-# Show Islamic welcome message (only once per interactive shell)
-if [ "$PS1" ]; then
-  echo -e "\n\e[1;32m🕋 Welcome to your Islamic Linux environment 🕌\e[0m"
+# Show Islamic welcome message (only for interactive shells)
+if [[ $- == *i* ]]; then
+  echo -e "\n\033[1;32m🕋 Welcome to your Islamic Linux environment 🕌\033[0m"
 fi
 
-# Prompt on a new line with purple color and consistent layout
+# Prompt: clean two-line prompt with icons and purple theme
 PS1='┌──(\[\033[01;35m\]\u@\h\[\033[00m\])-[\[\033[01;32m\]\w\[\033[00m\]]\n└─\$ '
 
 # Aliases
@@ -13,9 +13,9 @@ alias ll='ls -la'
 alias grep='grep --color=auto'
 
 # PATH
-export PATH=$PATH:/usr/local/bin
+export PATH="$PATH:/usr/local/bin"
 
-# Source global settings if they exist
+# Source global bashrc if it exists
 if [ -f /etc/bashrc ]; then
   . /etc/bashrc
 fi
