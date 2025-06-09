@@ -16,5 +16,7 @@ if [ -f /etc/bashrc ]; then
 fi
 
 # Set directory color to bold purple (di=1;35)
-eval "$(dircolors -b)"
-export LS_COLORS="$LS_COLORS:di=1;35"
+eval "$(dircolors -b ~/.dircolors 2>/dev/null || dircolors -b)"
+LS_COLORS="$LS_COLORS:di=1;35"
+export LS_COLORS
+
