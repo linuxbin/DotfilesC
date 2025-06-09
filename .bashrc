@@ -1,20 +1,20 @@
 # .bashrc
 
 # Prompt setting (change blue to purple)
-PS1='\[\033[01;35m\]\u@\h \[\033[00m\]\[\033[01;35m\]\w \$\[\033[00m\]'
+PS1='\[\033[01;35m\]\u@\h \[\033[00m\]\[\033[01;35m\]\w \$\[\033[00m\] '
 
-# Other existing configurations...
-
-# Example of other configurations that might be present
-# Setting aliases
+# Example aliases
 alias ll='ls -la'
 alias grep='grep --color=auto'
 
-# Exporting environment variables
+# Exporting custom PATH additions
 export PATH=$PATH:/usr/local/bin
 
-# Source global definitions
+# Source global definitions if available
 if [ -f /etc/bashrc ]; then
     . /etc/bashrc
 fi
 
+# Set directory color to bold purple (di=1;35)
+eval "$(dircolors -b)"
+export LS_COLORS="$LS_COLORS:di=1;35"
