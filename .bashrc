@@ -2,7 +2,7 @@
 
 # Prompt setting (change blue to purple)
 PS1='\[\033[01;35m\]\u@\h \[\033[00m\]\[\033[01;35m\]\w \$\[\033[00m\] '
-
+echo -e "\e[1;32m🕋 Welcome to your Islamic Linux environment 🕌\e[0m"
 # Example aliases
 alias ll='ls -la'
 alias grep='grep --color=auto'
